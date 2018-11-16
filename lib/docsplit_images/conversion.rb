@@ -71,10 +71,11 @@ module DocsplitImages
           )
         )
 
-      if Dir.exist? "#{parent_dir}/images"
+      if Dir.exist?("#{parent_dir}/images")
         Dir.entries("#{parent_dir}/images").size - 2
-      end
-      0
+      else
+        0
+      end 
     end
 
     # return the progress in term of percentage
