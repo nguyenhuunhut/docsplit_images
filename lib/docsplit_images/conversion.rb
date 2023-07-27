@@ -26,7 +26,6 @@ module DocsplitImages
           send(self.class.docsplit_attachment_name).path
         )
       )
-      s3 = Aws::S3::Resource.new(region: ENV['AWS_REGION'])
       FileUtils.rm_rf("#{parent_dir}/images")
       FileUtils.mkdir("#{parent_dir}/images")
       doc_path = send(self.class.docsplit_attachment_name).path
